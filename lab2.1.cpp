@@ -1,7 +1,7 @@
 //
 // Created by Hanh Hoang on 18.1.2024.
 //
-//Ex.2.1
+//Ex.2.1: stringstream handle
 //Write a program that asks user to enter a line that contains integers or “stop” to stop the program. If
 //user enters a string that starts with “stop” the program stops. Otherwise, the program creates a
 //string stream from the user input and reads integers from the stream. Program keeps reading and

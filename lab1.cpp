@@ -1,7 +1,7 @@
 //
 // Created by Hanh Hoang on 16.1.2024.
 //
-//Ex.1
+//Ex.1 std::vector
 //Write a program that defines an empty vector of integers.
 //Then program asks user how many numbers he/she wants to enter. Then program asks user to enter the numbers one at a time and adds them to the vector. When all number have been entered the program prints the numbers in the vector.
 

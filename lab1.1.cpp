@@ -1,6 +1,6 @@
 //
 // Created by Hanh Hoang on 16.1.2024.
-//
+//ex1.1 reference function
 //Write a function that takes a reference to string and a character (by value) as parameters.
 //The function replaces all occurrences of the character with underscores.
 //Write a program that ask user to enter a string. Then program asks user to enter character to replace or “stop” to stop the program.
