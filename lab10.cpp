@@ -38,9 +38,6 @@ class RandGen {
 public:
     RandGen(int min, int max);
     RandGen(): numbers() {srand(time(NULL));};
-    int getRange(){
-        return range_max-range_min+1;
-    };
     int operator()();
 private:
     vector<int> numbers;
@@ -95,19 +92,17 @@ void Print_matching_vector::operator()(int nr) {
 }
 
 void test_generator(RandGen ur, int count){
-    vector<int> vec(count);
-    int range = ur.getRange();
+    vector<int> vec;
     cout << "Generating numbers" << endl;
     try{
-        generate(vec.begin(), vec.end(), ur);
-        copy( vec.begin(), vec.end(), ostream_iterator<int> (cout,"\n"));
+        for(int i = 0; i < count; ++i){
+            vec.push_back(ur());
+        }
     }catch(runtime_error &e){
         cout << e.what();
-        cout << " Tried to generate " << count << " random numbers. Got only " << range << endl;
-        for(auto i = vec.begin(); i != vec.end(); ++i){
-            if(*i != 0){
-                cout << *i << endl;
-            }
-        }
+        cout << " Tried to generate " << count << " random numbers. Got only " << vec.size() << endl;
+    }
+    for(auto i = vec.begin(); i != vec.end(); ++i){
+            cout << *i << endl;
     }
 }
